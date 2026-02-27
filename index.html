@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyk.ANDRIAMPARANY · Portfolio moderne</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- BANDE DÉFILANTE -->
+    <div class="scrolling-banner">
+        <div class="scrolling-content">
+            <span><i class="fas fa-code"></i> DÉVELOPPEUR WEB ET CRÉATEUR DE BASES DE DONNÉES</span>
+            <i class="fas fa-star"></i>
+            <span><i class="fab fa-react"></i> REACT • <i class="fab fa-node"></i> NODE.JS • <i class="fab fa-python"></i> PYTHON • <i class="fas fa-database"></i> MYSQL</span>
+            <i class="fas fa-star"></i>
+            <span><i class="fas fa-database"></i> MONGODB • <i class="fab fa-node"></i> EXPRESS • <i class="fab fa-vuejs"></i> VUE.JS • <i class="fab fa-docker"></i> DOCKER</span>
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+
+    <!-- Theme toggle (CSS pure) -->
+    <div class="theme-toggle-container">
+        <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
+        <label for="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </label>
+    </div>
+    
+    <!-- Bouton CV -->
+    <a href="#" class="cv-download">
+        <i class="fas fa-file-pdf"></i> CV
+    </a>
+
+    <!-- Navigation avec menu burger CSS pure -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <span class="logo"><i class="fas fa-laptop-code"></i> BIENVENUE </span>
+            
+            <div class="menu-toggle-container">
+                <input type="checkbox" id="menuToggle" class="menu-toggle-checkbox">
+                <label for="menuToggle" class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </label>
+                <div class="nav-links">
+                    <a href="#accueil" class="nav-link"><i class="fas fa-home"></i> Accueil</a>
+                    <a href="#a-propos" class="nav-link"><i class="fas fa-user"></i> À propos</a>
+                    <a href="#formation" class="nav-link"><i class="fas fa-graduation-cap"></i> Formation</a>
+                    <a href="#competences" class="nav-link"><i class="fas fa-cogs"></i> Compétences</a>
+                    <a href="#projets" class="nav-link"><i class="fas fa-project-diagram"></i> Projets</a>
+                    <a href="#blog" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                    <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contacts</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section id="accueil" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-avatar static-avatar">
+                        <div class="avatar-img">
+                            <img src="images/profil.png" alt="Photo profil">
+                        </div>
+                    </div>
+                    
+                    <span class="hero-badge">
+                        <i class="fas fa-graduation-cap"></i> Étudiant en Informatique
+                    </span>
+                    
+                    <h1 class="hero-title static-title">
+                        Je suis <span class="hero-highlight name-animation">Joyk ANDRIAMPARANY</span>
+                    </h1>
+                    
+                    <p class="hero-desc"><i class="fas fa-quote-left"></i> Développeur créatif spécialisé en applications web et mobiles. Je transforme vos idées en expériences numériques élégantes. <i class="fas fa-quote-right"></i></p>
+                    
+                    <div class="hero-cta">
+                        <a href="#projets" class="btn btn-primary"><i class="fas fa-rocket"></i> Projets</a>
+                        <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Contacts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- À PROPOS DE MOI - AVEC IMAGE À GAUCHE -->
+        <section id="a-propos">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i> À propos de moi
+                </h2>
+                
+                <div class="about-container">
+                    <!-- Colonne image -->
+                    <div class="about-image-col">
+                        <div class="about-image-card">
+                            <img src="images/profil1.jpg" alt="Photo de Joyk" class="about-img">
+                            <div class="about-image-overlay">
+                                <span><i class="fas fa-camera"></i> Joyk ANDRIAMPARANY</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Colonne informations (deux cartes) -->
+                    <div class="about-info-col">
+                        <!-- Carte d'identité -->
+                        <div class="about-card">
+                            <h3><i class="fas fa-id-card"></i> Identité</h3>
+                            <ul class="about-list">
+                                <li><strong>Nom :</strong> ANDRIAMPARANY</li>
+                                <li><strong>Prénoms :</strong> Joyk Nantenaina</li>
+                                <li><strong>Date et lieu de naissance :</strong> 01/01/2005, Fianarantsoa</li>
+                                <li><strong>Sexe :</strong> Masculin</li>
+                                <li><strong>Origine :</strong> Madagascar</li>
+                                <li><strong>Situation matrimoniale :</strong> Célibataire</li>
+                                <li><strong>Domicile :</strong> Fianarantsoa, Madagascar</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Carte diplômes -->
+                        <div class="about-card">
+                            <h3><i class="fas fa-graduation-cap"></i> Diplômes</h3>
+                            <ul class="about-list">
+                                <li><strong>CEPE :</strong> 2016</li>
+                                <li><strong>BEPC :</strong> 2020</li>
+                                <li><strong>BACC :</strong> 2023</li>
+                                <li><strong>Série :</strong> S (Scientifique)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMATION -->
+        <section id="formation">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i> Formation
+                </h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2025 - 2026</span>
+                            <h3><i class="fas fa-university"></i> L1 en Informatique</h3>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> EMIT Fianarantsoa</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024 - 2025</span>
+                            <h3><i class="fas fa-university"></i> L2 en Physique</h3>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Université d'Antananarivo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2023 - 2024</span>
+                            <h3><i class="fas fa-university"></i> L1 en Physique</h3>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Université d'Antananarivo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPÉTENCES -->
+        <section id="competences">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i> Compétences
+                </h2>
+                
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-desktop"></i> Frontend</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-react"></i> React</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-vuejs"></i> Vue.js</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Backend</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-node"></i> Node.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-python"></i> Python</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fab fa-html5 skill-icon"></i><div>HTML5</div></div>
+                    <div class="skill-card"><i class="fab fa-css3-alt skill-icon"></i><div>CSS3</div></div>
+                    <div class="skill-card"><i class="fab fa-js skill-icon"></i><div>JavaScript</div></div>
+                    <div class="skill-card"><i class="fab fa-react skill-icon"></i><div>React</div></div>
+                    <div class="skill-card"><i class="fab fa-vuejs skill-icon"></i><div>Vue.js</div></div>
+                    <div class="skill-card"><i class="fab fa-node skill-icon"></i><div>Node.js</div></div>
+                    <div class="skill-card"><i class="fab fa-python skill-icon"></i><div>Python</div></div>
+                    <div class="skill-card"><i class="fas fa-database skill-icon"></i><div>MongoDB</div></div>
+                    <div class="skill-card"><i class="fas fa-database skill-icon"></i><div>MySQL</div></div>
+                </div>
+
+                <!-- SECTION LANGUES AVEC DRAPEAUX -->
+                <div class="languages-section">
+                    <h3 class="languages-title">
+                        <i class="fas fa-language"></i> Langues
+                    </h3>
+                    
+                    <div class="languages-grid">
+                        <!-- Français -->
+                        <div class="language-card">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w320/fr.png" alt="Drapeau français" class="flag-icon">
+                            </div>
+                            <div class="language-info">
+                                <span class="language-name">Français</span>
+                                <span class="language-level">90%</span>
+                            </div>
+                            <div class="progress-bar language-progress">
+                                <div class="progress" data-width="90%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Anglais -->
+                        <div class="language-card">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w320/gb.png" alt="Drapeau anglais" class="flag-icon">
+                            </div>
+                            <div class="language-info">
+                                <span class="language-name">Anglais</span>
+                                <span class="language-level">70%</span>
+                            </div>
+                            <div class="progress-bar language-progress">
+                                <div class="progress" data-width="70%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Malagasy -->
+                        <div class="language-card">
+                            <div class="flag-container">
+                                <img src="https://flagcdn.com/w320/mg.png" alt="Drapeau malgache" class="flag-icon">
+                            </div>
+                            <div class="language-info">
+                                <span class="language-name">Malgache</span>
+                                <span class="language-level">100%</span>
+                            </div>
+                            <div class="progress-bar language-progress">
+                                <div class="progress" data-width="100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETS - Version avec filtres CSS -->
+        <section id="projets">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i> Projets
+                </h2>
+                
+                <!-- Filtres CSS avec radio buttons -->
+                <div class="filter-container">
+                    <input type="radio" name="filter" id="filter-all" class="filter-radio" checked>
+                    <label for="filter-all" class="filter-btn"><i class="fas fa-th-large"></i> Tous</label>
+                    
+                    <input type="radio" name="filter" id="filter-web" class="filter-radio">
+                    <label for="filter-web" class="filter-btn"><i class="fas fa-globe"></i> Web</label>
+                    
+                    <input type="radio" name="filter" id="filter-mobile" class="filter-radio">
+                    <label for="filter-mobile" class="filter-btn"><i class="fas fa-mobile-alt"></i> Mobile</label>
+                    
+                    <input type="radio" name="filter" id="filter-fullstack" class="filter-radio">
+                    <label for="filter-fullstack" class="filter-btn"><i class="fas fa-layer-group"></i> Fullstack</label>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Projet 1 - ShopEase (fullstack) -->
+                    <div class="project-card" data-category="web fullstack">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="ShopEase">
+                            <div class="project-img-overlay">
+                                <span class="project-overlay-text"><i class="fas fa-rocket"></i> Fullstack</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3><i class="fas fa-shopping-cart"></i> ShopEase</h3>
+                            <p>Plateforme e-commerce complète</p>
+                            <div class="project-tech">
+                                <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                                <span class="tech-tag"><i class="fab fa-node"></i> Node.js</span>
+                                <span class="tech-tag"><i class="fas fa-database"></i> MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 2 - WeatherFlow (web) -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="WeatherFlow">
+                            <div class="project-img-overlay">
+                                <span class="project-overlay-text"><i class="fas fa-cloud-sun"></i> Dashboard</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3><i class="fas fa-cloud-sun"></i> WeatherFlow</h3>
+                            <p>Application météo interactive</p>
+                            <div class="project-tech">
+                                <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                                <span class="tech-tag"><i class="fas fa-cloud"></i> API</span>
+                                <span class="tech-tag"><i class="fas fa-chart-line"></i> Chart.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 3 - Taskly (mobile fullstack) -->
+                    <div class="project-card" data-category="mobile fullstack">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Taskly">
+                            <div class="project-img-overlay">
+                                <span class="project-overlay-text"><i class="fas fa-mobile-alt"></i> Mobile</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3><i class="fas fa-tasks"></i> Taskly</h3>
+                            <p>Gestion de tâches collaborative</p>
+                            <div class="project-tech">
+                                <span class="tech-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
+                                <span class="tech-tag"><i class="fas fa-fire"></i> Firebase</span>
+                                <span class="tech-tag"><i class="fas fa-mobile-alt"></i> PWA</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 4 - Bibliothèque (web fullstack) -->
+                    <div class="project-card" data-category="web fullstack">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bibliothèque">
+                            <div class="project-img-overlay">
+                                <span class="project-overlay-text"><i class="fas fa-book"></i> Fullstack</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3><i class="fas fa-book"></i> Bibliothèque</h3>
+                            <p>Gestion de bibliothèque complète</p>
+                            <div class="project-tech">
+                                <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
+                                <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section id="blog">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-blog"></i> Articles récents
+                </h2>
+                
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="React">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date"><i class="far fa-calendar-alt"></i> 15 Mars 2025</div>
+                            <h3><i class="fab fa-react"></i> Hooks React</h3>
+                            <a href="#" class="blog-link">Lire <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Microservices">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date"><i class="far fa-calendar-alt"></i> 28 Fév 2025</div>
+                            <h3><i class="fas fa-network-wired"></i> Microservices</h3>
+                            <a href="#" class="blog-link">Lire <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Docker">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date"><i class="far fa-calendar-alt"></i> 10 Fév 2025</div>
+                            <h3><i class="fab fa-docker"></i> Docker</h3>
+                            <a href="#" class="blog-link">Lire <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope"></i> Contact
+                </h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <span>joynantenaina0@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <span>+261 34 71 113 78</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                            <span>linkedin.com/in/joyk-A</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <span>github.com/Joyk-ANDRIAMPARANY</span>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Nom complet">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-tag"></i>
+                            <input type="text" placeholder="Sujet">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-comment"></i>
+                            <textarea placeholder="Message"></textarea>
+                        </div>
+                        <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-dev"></i></a>
+            </div>
+            <p><i class="far fa-copyright"></i> 2026 Joyk ANDRIAMPARANY — Portfolio étudiant</p>
+        </div>
+    </footer>
+</body>
+</html>
