@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Joyk ANDRIAMPARANY</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cv-container {
+            max-width: 1000px;
+            width: 100%;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        /* En-tête avec photo de profil */
+        .header {
+            background: linear-gradient(135deg, #4f5b9e 0%, #2c3e50 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Photo de profil principale (grand format) */
+        .profile-photo-large {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: 5px solid rgba(255,255,255,0.3);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .profile-photo-large img {
+            width: 140px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .header .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Grille principale */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+
+        /* Colonne latérale gauche */
+        .sidebar {
+            background-color: #f8fafc;
+            padding: 30px;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        /* Photo de profil dans la sidebar (miniature) */
+        .profile-photo-small {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            margin: 0 auto 25px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 3px solid #667eea;
+            box-shadow: 0 5px 15px rgba(102,126,234,0.3);
+        }
+
+        .profile-photo-small img {
+            width: 75px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-section h3 {
+            color: #2d3748;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .info-item {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .info-item strong {
+            color: #4a5568;
+            font-weight: 600;
+            min-width: 110px;
+            display: inline-block;
+        }
+
+        .info-item span {
+            color: #2d3748;
+        }
+
+        /* Compétences */
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .skill-bar-bg {
+            background-color: #e2e8f0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .skill-tag {
+            background-color: #e9d8fd;
+            color: #553c9a;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 0 5px 8px 0;
+            font-weight: 500;
+        }
+
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            color: #2d3748;
+        }
+
+        .lang-percent {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* Colonne principale droite */
+        .main-content {
+            padding: 30px;
+        }
+
+        .main-section {
+            margin-bottom: 35px;
+        }
+
+        .main-section h3 {
+            color: #2d3748;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .formation-item {
+            margin-bottom: 25px;
+        }
+
+        .formation-date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .formation-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 5px;
+        }
+
+        .formation-place {
+            color: #718096;
+            font-style: italic;
+        }
+
+        .diplome-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .diplome-card {
+            background-color: #f7fafc;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+
+        .diplome-card .diplome-name {
+            font-weight: 700;
+            color: #2d3748;
+            font-size: 1.1rem;
+        }
+
+        .diplome-card .diplome-year {
+            color: #667eea;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Contact et footer */
+        .contact-info {
+            background-color: #f0f5fa;
+            padding: 20px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #2d3748;
+        }
+
+        .contact-icon {
+            background-color: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .contact-text {
+            font-size: 0.95rem;
+        }
+
+        .contact-text a {
+            color: #2d3748;
+            text-decoration: none;
+        }
+
+        .contact-text a:hover {
+            color: #667eea;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            .diplome-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- En-tête principal avec photo de profil -->
+        <div class="header">
+            <!-- Photo de profil principale (schéma/placeholder) -->
+            <div class="profile-photo-large">
+                <img src="../images/profil1.jpg">
+            </div>
+            <h1>Joyk ANDRIAMPARANY</h1>
+            <div class="subtitle">Développeur créatif spécialisé en applications web et mobiles. Je transforme vos idées en expériences numériques élégantes.</div>
+        </div>
+
+        <div class="grid-2">
+            <!-- Colonne latérale gauche : infos perso, compétences, langues -->
+            <div class="sidebar">
+                <!-- Mini photo de profil dans la sidebar -->
+                <div class="profile-photo-small">
+                    <img src="../images/profil1.jpg">
+                </div>
+
+                <!-- Section Identité -->
+                <div class="sidebar-section">
+                    <h3>Identité</h3>
+                    <div class="info-item"><strong>Nom :</strong> <span>ANDRIAMPARANY</span></div>
+                    <div class="info-item"><strong>Prénoms :</strong> <span>Joyk Nantenaina</span></div>
+                    <div class="info-item"><strong>Né(e) le :</strong> <span>01/01/2002, Ambatolampy</span></div>
+                    <div class="info-item"><strong>Sexe :</strong> <span>Masculin</span></div>
+                    <div class="info-item"><strong>Origine :</strong> <span>Madagascar</span></div>
+                    <div class="info-item"><strong>Situation :</strong> <span>Célibataire</span></div>
+                    <div class="info-item"><strong>Domicile :</strong> <span>Fianarantsoa, Madagascar</span></div>
+                </div>
+
+                <!-- Section Diplômes (extrait) -->
+                <div class="sidebar-section">
+                    <h3>Diplômes</h3>
+                    <div class="info-item"><strong>CEPE :</strong> <span>2016</span></div>
+                    <div class="info-item"><strong>BEPC :</strong> <span>2020</span></div>
+                    <div class="info-item"><strong>BACC :</strong> <span>2023 (Série S)</span></div>
+                </div>
+
+                <!-- Section Compétences techniques (tags) -->
+                <div class="sidebar-section">
+                    <h3>Tech Stack</h3>
+                    <div>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+
+                <!-- Compétences avec pourcentages (Frontend) -->
+                <div class="sidebar-section">
+                    <h3>Frontend</h3>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>HTML</span> <span>75%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>CSS</span> <span>50%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Compétences Backend -->
+                <div class="sidebar-section">
+                    <h3>Backend</h3>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Node.js</span> <span>20%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:20%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Python</span> <span>25%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:25%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Langues -->
+                <div class="sidebar-section">
+                    <h3>Langues</h3>
+                    <div class="lang-item"><span>Français</span> <span class="lang-percent">90%</span></div>
+                    <div class="lang-item"><span>Anglais</span> <span class="lang-percent">70%</span></div>
+                    <div class="lang-item"><span>Malgache</span> <span class="lang-percent">100%</span></div>
+                </div>
+            </div>
+
+            <!-- Colonne principale droite : formations, parcours -->
+            <div class="main-content">
+                <!-- Section Formation -->
+                <div class="main-section">
+                    <h3>Formation</h3>
+                    
+                    <div class="formation-item">
+                        <div class="formation-date">2025 - 2026</div>
+                        <div class="formation-title">L1 en Informatique</div>
+                        <div class="formation-place">EMIT Fianarantsoa</div>
+                    </div>
+
+                    <div class="formation-item">
+                        <div class="formation-date">2024 - 2025</div>
+                        <div class="formation-title">L2 en Physique</div>
+                        <div class="formation-place">Université d'Antananarivo</div>
+                    </div>
+
+                    <div class="formation-item">
+                        <div class="formation-date">2023 - 2024</div>
+                        <div class="formation-title">L1 en Physique</div>
+                        <div class="formation-place">Université d'Antananarivo</div>
+                    </div>
+                </div>
+
+                <!-- Section Diplômes détaillée -->
+                <div class="main-section">
+                    <h3>Parcours scolaire</h3>
+                    <div class="diplome-grid">
+                        <div class="diplome-card">
+                            <div class="diplome-name">CEPE</div>
+                            <div class="diplome-year">2016</div>
+                        </div>
+                        <div class="diplome-card">
+                            <div class="diplome-name">BEPC</div>
+                            <div class="diplome-year">2020</div>
+                        </div>
+                        <div class="diplome-card">
+                            <div class="diplome-name">BACC Série S</div>
+                            <div class="diplome-year">2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section "À propos" reprenant la phrase d'accroche -->
+                <div class="main-section">
+                    <h3>À propos</h3>
+                    <p style="color: #4a5568; line-height: 1.7; font-size: 1.05rem; background: #f8fafc; padding: 20px; border-radius: 10px;">
+                        Développeur créatif spécialisé en applications web et mobiles. Je transforme vos idées en expériences numériques élégantes. Passionné par les nouvelles technologies et le design d'interfaces, je mets mes compétences au service de projets innovants.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pied de page avec coordonnées (contact) -->
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">✉</div>
+                <div class="contact-text"><a href="mailto:joynantenaina0@gmail.com">joynantenaina0@gmail.com</a></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">+261 34 71 113 78</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">in</div>
+                <div class="contact-text"><a href="#" target="_blank">linkedin.com/in/joyk-A</a></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">GH</div>
+                <div class="contact-text"><a href="#" target="_blank">github.com/Joyk-ANDRIAMPARANY</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
